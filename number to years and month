@@ -1,0 +1,66 @@
+number to years and monthimport java.util.Scanner;
+public_class_number_to_years_and_month {
+
+    // Method to check if a year is a leap year
+    public static boolean year1(int year) {
+        if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
+            return true; // It's a leap year
+        } else {
+            return false; // Not a leap year
+        }
+    }
+
+    // Method to print the number of days in a month
+    public static void month1(int num) {
+        switch (num) {
+            case 1:
+                System.out.println("jan - 31 days");
+                break;
+            case 2:
+                System.out.println("feb - 28 days for a normal year, 29 days for a leap year");
+                break;
+            case 3:
+                System.out.println("march - 31 days");
+                break;
+            case 4:
+                System.out.println("april - 30 days");
+                break;
+            case 5:
+                System.out.println("may - 31 days");
+                break;
+            case 6:
+                System.out.println("june - 30 days");
+                break;
+            case 7:
+                System.out.println("july - 31 days");
+                break;
+            case 8:
+                System.out.println("aug - 31 days");
+                break;
+            case 9:
+                System.out.println("sep - 30 days");
+                break;
+            case 10:
+                System.out.println("oct - 31 days");
+                break;
+            case 11:
+                System.out.println("nov - 30 days");
+                break;
+            case 12:
+                System.out.println("dec - 31 days");
+                break;
+        }
+    }
+
+    // Main method to get input and display results
+    public static void main(String[] args) {
+        Scanner sca = new Scanner(System.in); // Scanner for input
+        System.out.println("enter the year:");
+        int year2 = sca.nextInt(); // Read the year input
+        System.out.println("enter the month:");
+        int month = sca.nextInt(); // Read the month input
+
+        year1(year2); // Check if it's a leap year
+        month1(month); // Display the month details
+    }
+}
