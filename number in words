@@ -1,0 +1,53 @@
+
+import java.util.Scanner;
+
+// convert  number to its word form
+public class numbertowords {
+
+    // Method to print the word form
+    public static void number1(int num) {
+        switch (num) {
+            case 0:
+                System.out.println("zero"); // If the number is 0
+                break;
+            case 1:
+                System.out.println("one"); // If the number is 1
+                break;
+            case 2:
+                System.out.println("two"); // If the number is 2
+                break;
+            case 3:
+                System.out.println("three"); // If the number is 3
+                break;
+            case 4:
+                System.out.println("four"); // If the number is 4
+                break;
+            case 5:
+                System.out.println("five"); // If the number is 5
+                break;
+            case 6:
+                System.out.println("six"); // If the number is 6
+                break;
+            case 7:
+                System.out.println("seven"); // If the number is 7
+                break;
+            case 8:
+                System.out.println("eight"); // If the number is 8
+                break;
+            case 9:
+                System.out.println("nine"); // If the number is 9
+                break;
+            case 10:
+                System.out.println("ten"); // If the number is 10
+                break;
+        }
+    }
+
+    // Main method
+    public static void main(String[] args) {
+        Scanner sca = new Scanner(System.in); //Scanner object for input
+        int number = sca.nextInt(); // Read an integer from the user
+        number1(number); // Call the method to convert and print the number
+    }
+}
+```
