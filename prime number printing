@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+
+public class exception {
+
+    // Method to find prime numbers between start and end
+    public static void prime_numbers(int start, int end) {
+        for (int i = start; i <= end; i++) { // Loop through numbers in the range
+            boolean isprime = true; // Assume the number is prime
+            for (int j = 2; j <= Math.sqrt(i); j++) { // Check divisors up to the square root of i
+                if (i % j == 0) { // If divisible, it's not a prime number
+                    isprime = false;
+                    break; // Exit loop since i is not prime
+                }
+            }
+            if (isprime) { // Print the number if it's prime and greater than 1
+                System.out.println(i);
+            }
+        }
+    }
+
+    // Main method to take input and call the prime_numbers method
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in); // Create Scanner for user input
+        System.out.println("enter the start"); // Prompt for start of range
+        int start = scan.nextInt(); // Read start value
+        System.out.println("enter the end"); // Prompt for end of range
+        int end = scan.nextInt(); // Read end value
+        prime_numbers(start, end); // Call method to find and print prime numbers
+    }
+}
