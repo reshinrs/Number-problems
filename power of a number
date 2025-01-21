@@ -1,0 +1,25 @@
+package coding_problems;
+
+import java.util.Scanner;
+
+public class power_of_number {
+
+    public static void power_finder(int number, int power) {
+        int org_num = number; 
+        int org_power = power;
+        int sum = 1;
+        // Loop to multiply the number by itself 'power' times
+        for (int i = 1; i <= power; i++) {
+            sum = sum * number;
+        }
+        System.out.println(sum);
+    }
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Enter the number");
+        int number = scan.nextInt();
+        System.out.println("Enter the power");
+        int power = scan.nextInt();
+        power_finder(number, power);
+    }
+}
