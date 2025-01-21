@@ -1,0 +1,24 @@
+package coding_problems;
+
+import java.util.Scanner;
+
+public class fibonaccci_series {
+    public static void f_series(int number){
+        int a=0;
+        int b=1;
+        System.out.println(a);
+        System.out.println(b);
+        for(int i=0;i<=number;i++){//logic to print fibonnaci series
+            int c=a+b; // new variable ci declared
+            a=b;//change the value b to a
+            b=c;change the value c to b to make the loop tio continue link
+            System.out.println(b);
+        }
+    }
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Enter the number");
+        int number= scan.nextInt();
+        f_series(number);
+    }
+}
