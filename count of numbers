@@ -1,0 +1,23 @@
+package coding_problems;
+
+import java.util.Scanner;
+
+public class sum_of_the_digits {
+
+    public static void sum_of_digits(int number) {
+        int sum = 0;
+        while (number != 0) { // Loop until the number becomes 0
+            sum = sum + number % 10; // Add the last digit to the sum
+            number = number / 10; // Remove the last digit from the number
+        }
+
+        System.out.println(sum);
+    }
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Enter the Number");
+        int number = scan.nextInt();
+        sum_of_digits(number);
+    }
+}
