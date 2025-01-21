@@ -1,0 +1,26 @@
+package coding_problems;
+
+import java.util.Scanner;
+
+public class sum_of_even_numbers {
+
+    public static void eve_counter(int Start, int End) {
+        int sum = 0; 
+        for (int i = Start; i <= End; i++) { // Loop through the range from Start to End
+            if (Start % 2 == 0) { // Check if the current number is even
+                sum = sum + Start; // Add the even number to the sum
+            }
+            Start = Start + 1; // Move to the next number
+        }
+        System.out.println(sum);
+    }
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Enter the starting point");
+        int Start = scan.nextInt();
+        System.out.println("Enter the ending point");
+        int End = scan.nextInt();
+        eve_counter(Start, End);
+    }
+}
