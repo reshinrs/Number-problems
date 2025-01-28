@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class practice2 {
+    public static void addition_subtraction(int a,int b){
+        int addition=a+b;//logic to add
+        int subtraction=a-b;//logic to subtract
+        System.out.println("After addition ;"+addition);
+        if(subtraction<0){//logic to print subtraction in positive if it is negative
+            subtraction=subtraction*(-1);
+            System.out.println("After subtraction : "+subtraction);
+        }
+    }
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Enter the integer a :");
+        int a=scan.nextInt();
+        System.out.println("Enter the integer b :");
+        int b=scan.nextInt();
+        addition_subtraction(a,b);
+
+    }
+}
