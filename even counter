@@ -6,8 +6,8 @@ public class sum_of_even_numbers {
 
     public static void eve_counter(int Start, int End) {
         int sum = 0; 
-        for (int i = Start; i <= End; i++) { // Loop through the range from Start to End
-            if (Start % 2 == 0) { // Check if the current number is even
+        for (int i = Start; i <= End; i++) { // Loop  the range from Start to End
+            if (Start % 2 == 0) { // if the current number is even
                 sum = sum + Start; // Add the even number to the sum
             }
             Start = Start + 1; // Move to the next number
