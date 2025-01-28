@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class practice {
+    public static  void washin_machine(int weight){
+        if(weight>1 && weight<=7000){
+            if (weight<2000) {//weight lesser than 2000
+                System.out.println("Low level water");
+                System.out.println("25 mins");
+            }
+            else if(weight<4000&&weight>=2001){//weight greater than 2000 and weight lesser than 4000
+                System.out.println("Medium water");
+                System.out.println("35 mins");
+            }
+            else if(weight>=4001&&weight<7000){//weight greater than 4000 and lesser than 7000
+                System.out.println("High water required");
+                System.out.println("45 mins");
+            }
+
+        }
+        if(weight>7000){
+            System.out.println("OVER LOADED"); //weight greater than 7000
+        }
+        if(weight<=0){//weight lesser than or equal to zero
+            System.out.println("INVALID INPUT");
+        }
+    }
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Enter the weight :");
+        int weight=scan.nextInt();
+        washin_machine(weight);
+
+    }
