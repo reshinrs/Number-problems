@@ -1,0 +1,27 @@
+package reshin_coding;
+
+import java.util.Scanner;
+
+public class practice {
+    public static void examin(int a){
+        int b=27;//27 is initialized
+        if(a%27==0){
+            for(int i=1;i<=b;i++){//loop to find the multiple of 27 till the inputed number
+                int muliple=i*b;
+                System.out.println(muliple);
+                if(muliple==a){
+                    break;//break the loop if it reached the reqiured value
+                }
+            }
+        }
+        else {
+            System.out.println("It cannot divided since it is not a multiple fa");
+        }
+    }
+    public static  void main(String []args){
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Enter the number to be examined : ");
+        int a=scan.nextInt();
+        examin(a);
+    }
+}
