@@ -1,0 +1,146 @@
+import java.util.Scanner;
+
+public class practice3 {
+    public static void coparing(int date ,int month,int year){
+        if((year%400==0)||((year%4==0)&&(year%100!=0))){
+            int count=0;
+            switch (month){//cases to print the count of dates
+                case 1:
+                    count=date;
+                    System.out.println(date);
+                    break;
+                case 2:
+                    count=60;
+                    count=count-(29-date);
+                    System.out.println(count);
+                    break;
+                case 3:
+                    count=91;
+                    count=count-(31-date);
+                    System.out.println(count);
+                    break;
+                case 4:
+                    count=121;
+                    count=count-(30-date);
+                    System.out.println(count);
+                    break;
+                case 5:
+                    count=152;
+                    count=count-(31-date);
+                    System.out.println(count);
+                    break;
+                case 6:
+                    count=182;
+                    count=count-(30-date);
+                    System.out.println(count);
+                    break;
+                case 7:
+                    count=213;
+                    count=count-(31-date);
+                    System.out.println(count);
+                    break;
+                case 8:
+                    count=244;
+                    count=count-(31-date);
+                    System.out.println(count);
+                    break;
+                case 9:
+                    count=274;
+                    count=count-(30-date);
+                    System.out.println(count);
+                    break;
+                case 10:
+                    count=305;
+                    count=count-(31-date);
+                    System.out.println(count);
+                    break;
+                case 11:
+                    count=335;
+                    count=count-(30-date);
+                    System.out.println(count);
+                    break;
+                case 12:
+                    count=366;
+                    count=count-(31-date);
+                    System.out.println(count);
+                    break;
+            }
+
+        }
+        else {
+            int count = 0;
+            switch (month) {//logic to print the count if it is not a leap year
+                case 1:
+                    count = date;
+                    System.out.println(date);
+                    break;
+                case 2:
+                    count = 59;
+                    count = count - (28 - date);
+                    System.out.println(count);
+                    break;
+                case 3:
+                    count = 90;
+                    count = count - (31 - date);
+                    System.out.println(count);
+                    break;
+                case 4:
+                    count = 120;
+                    count = count - (30 - date);
+                    System.out.println(count);
+                    break;
+                case 5:
+                    count = 151;
+                    count = count - (31 - date);
+                    System.out.println(count);
+                    break;
+                case 6:
+                    count = 181;
+                    count = count - (30 - date);
+                    System.out.println(count);
+                    break;
+                case 7:
+                    count = 212;
+                    count = count - (31 - date);
+                    System.out.println(count);
+                    break;
+                case 8:
+                    count = 243;
+                    count = count - (31 - date);
+                    System.out.println(count);
+                    break;
+                case 9:
+                    count = 273;
+                    count = count - (30 - date);
+                    System.out.println(count);
+                    break;
+                case 10:
+                    count = 304;
+                    count = count - (31 - date);
+                    System.out.println(count);
+                    break;
+                case 11:
+                    count = 334;
+                    count = count - (30 - date);
+                    System.out.println(count);
+                    break;
+                case 12:
+                    count = 365;
+                    count = count - (31 - date);
+                    System.out.println(count);
+                    break;
+            }
+        }
+    }
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Enter the date :");
+        int date =scan.nextInt();
+        System.out.println("Enter the month : ");
+        int month =scan.nextInt();
+        System.out.println("Enter the year : ");
+        int year =scan.nextInt();
+        coparing(date,month,year);
+
+    }
+}
