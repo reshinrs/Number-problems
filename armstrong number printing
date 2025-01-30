@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class practice3 {
+    public static boolean armstrong(int a){
+        int number=0;
+        int b=a;
+        while(a>0){
+            int count=0;
+            count=a%10;
+            number=number+(count*count*count);
+            a=a/10;
+        }
+        return number==b;
+    }
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Enter the number : ");
+        int a=scan.nextInt();
+        for (int i=100;i<a;i++){
+            if(armstrong(i)){
+                System.out.println(i);
+            }
+        }
+    }
+}
