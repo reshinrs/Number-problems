@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class practice {
+    public static  void main(String []args){
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Enter the number to be examined : ");
+        String word =scan.nextLine();
+        int len = word.length();
+        int count_a=0;
+        int count_e=0;
+        int count_i=0;
+        int count_o=0;
+        int count_u=0;
+
+        for(int i=0;i<len;i++){
+          switch (word.charAt(i)){//switch case condition to print aeiou in the given String
+                case 'a'->System.out.print(word.charAt(i)+" ");
+                case 'e' ->System.out.print(word.charAt(i)+" ");
+                case 'i' ->System.out.print(word.charAt(i)+" ");
+                case 'o' ->System.out.print(word.charAt(i)+" ");
+                case 'u'->System.out.print(word.charAt(i)+" ");
+            }
+        }
+    }
+}
