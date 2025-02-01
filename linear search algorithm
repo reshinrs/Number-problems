@@ -1,0 +1,24 @@
+
+import java.util.Scanner;
+
+public class practice2 {
+    static int linerar_search(int []arr,int target){
+        if(arr.length==0){this logic return if the array is empty 
+            return -1;
+        }
+        for(int i=0;i<arr.length;i++){
+            if(target==arr[i]){//logic to return the value of index if target found
+                return i;
+            }
+        }
+        return -1;// retun if the target is not found
+    }
+        public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int []arr={12,43,54,65,32,45,89,76};
+        System.out.println("Enter the number in the array : ");
+        int target=scan.nextInt();
+        int ans =linerar_search(arr,target);
+            System.out.println(ans);
+    }
+}
