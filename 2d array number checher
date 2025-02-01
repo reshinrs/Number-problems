@@ -1,0 +1,26 @@
+
+import java.util.Arrays;
+
+public class practice2 {
+    static int []number_finder(int [][]arr,int target){
+        for(int i=0;i<arr.length;i++){// logi to iterate through th 2d array
+            for(int j=0;j<arr[i].length;j++) {
+                if ( arr[i][j]==target) {
+                    return new int[]{i,j};// return th position of the value not found
+                }
+            }
+        }
+        return new int[]{-1,-1};//return if value not found
+    }
+    public static void main(String[] args) {
+        int [][]arr={
+                {18,12,4},
+                {-7,3,5,9},
+                {14,21,26,89},
+                {23,56}
+        };
+        int target= 3;
+        int [] ans=number_finder(arr,target);
+        System.out.println(Arrays.toString(ans));
+    }
+}
