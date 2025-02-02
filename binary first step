@@ -1,0 +1,31 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class practice2 {
+    static String bfs(int []arr,int target){
+        int lower=0;
+        int heigher=arr.length-1;
+        while (lower<heigher){\\loop continues till the lower is less than heighter
+            int middle=(lower+heigher)/2;\\condition to find the middle part
+            if(target==arr[middle]){
+                System.out.println(arr[middle]);
+                return "target found";
+            }
+            if(target<arr[middle]){
+                heigher=heigher-1;\\this condition runs if the target is lesser than middle
+            }
+            if(target>arr[middle]){
+                lower=lower+1;\\this condition runs if the target is higher than middle value
+            }
+        }
+        return "target not found";
+    }
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int []arr={1,2,3,4,5,6,7,8,9,10};
+        System.out.println(Arrays.toString(arr));
+        int target=scan.nextInt();
+        String res=bfs(arr,target);
+        System.out.println(res);
+    }
+}
