@@ -12,10 +12,10 @@ public class practice2 {
                 return "target found";
             }
             if(target<arr[middle]){
-                heigher=heigher-1;\\this condition runs if the target is lesser than middle
+                heigher=middle-1;\\this condition runs if the target is lesser than middle
             }
             if(target>arr[middle]){
-                lower=lower+1;\\this condition runs if the target is higher than middle value
+                lower=middle+1;\\this condition runs if the target is higher than middle value
             }
         }
         return "target not found";
