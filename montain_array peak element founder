@@ -1,0 +1,23 @@
+
+public class hello {
+    public static int mointaibarray(int arr[]){
+        int start=0;
+        int end=arr.length-1;
+        while(start<end){//condition to break the loop
+            int m=(start+end)/2;
+            if(arr[m]<arr[m+1]){//excuetes if the middle is small
+                start=m+1;
+            }
+            else{// excecutes if any other condition hits
+                end=m;
+            }
+        }
+        return start;
+    }
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int arr[]= {0,2,1,0};
+        int res=mointaibarray(arr);
+        System.out.println(res);
+    }
+}
