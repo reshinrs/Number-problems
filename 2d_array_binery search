@@ -1,0 +1,31 @@
+import java.util.Arrays;
+
+public class twod_array_search {
+    public static int[] twod_finder(int arr[][],int target) {
+        int row=0;
+        int col=arr.length-1;
+        while(row<arr.length&&col>=0){//logic to break the loop
+                if(arr[row][col]==target) {//logic to return if the ans is found
+                    return new int[]{row, col};
+                }
+                if(arr[row][col]<target){//increases the row count if target is greater
+                    row++;
+                }
+                if(arr[row][col]>target){//decreases the count if the target is lesser
+                    col--;
+                }
+
+        }
+        return new int[]{-1,-1};//returns this value if target is not found
+    }
+
+    public static void main(String[] args) {
+        int[][] arr = {{10, 20, 30, 40},
+                {15, 25, 35, 45},
+                {28, 29, 37, 49},
+                {33, 34, 38, 50}};
+        int target =0;
+        int ar[]=twod_finder(arr,target);
+        System.out.println(Arrays.toString(ar));
+    }
+}
