@@ -1,0 +1,23 @@
+package coding_problems;
+
+import java.util.Arrays;
+
+public class bubble_sort {
+    public static void bubblesort(int arr[]){
+        for(int i=0;i<arr.length;i++){
+            for(int j=1;j<arr.length-i;j++){
+                int temp=0;
+                if(arr[j]<arr[j-1]){//logic to sort in ascending order 
+                    temp=arr[j-1];//storing temporarty value
+                    arr[j-1]=arr[j];//scaping iff condition satisfies
+                    arr[j]=temp;
+                }
+            }
+        }
+        System.out.println(Arrays.toString(arr));
+    }
+    public static void main(String[] args) {
+        int arr[]={100,3,1,5,4,2,3,2,-1,-2,-3,-4,-5,3,4,4,5,4,3,2,6,7,8,6,5};
+        bubblesort(arr);
+    }
+}
