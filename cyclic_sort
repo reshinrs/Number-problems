@@ -1,0 +1,22 @@
+package coding_problems;
+public class cyclic_sorting {
+    public static void csorting(int arr[]){
+        for(int i=0;i<arr.length;){
+            if(i!=arr[i]-1){
+                swap(arr,i,arr[i]-1);//condtion to swap the numbers
+            }
+            else{
+                i++;
+            }
+        }
+    }
+    public static void swap(int arr[],int a,int b){//logic to swap the numbers
+        int temp=arr[a];
+        arr[a]=arr[b];
+        arr[b]=temp;
+    }
+    public static void main(String args[]){
+        int arr[]={3,5,2,1,4};
+        csorting(arr);
+    }
+}
