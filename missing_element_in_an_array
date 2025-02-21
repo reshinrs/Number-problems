@@ -1,0 +1,35 @@
+package coding_problems;
+
+import java.util.Arrays;
+
+public class missing_element {
+    public static int ms_finder(int arr[]){
+        int i=0;
+        while(i<arr.length){//cyclic sort for sorting the given array
+            int c=arr[i];
+            if(arr[i]<arr.length && arr[i]!=arr[c]){
+                swap(arr,i,c);//logic for swaping the values
+            }
+            else {
+                i++;
+            }
+        }
+        System.out.println(Arrays.toString(arr));
+        for(int j=0;j<arr.length;j++){//logic to find the missing element
+            if (arr[j] != j) {
+                return j;
+            }
+        }
+        return arr.length ;
+    }
+    public static void swap(int arr[],int a,int b){
+        int temp=arr[a];
+        arr[a]=arr[b];
+        arr[b]=temp;
+    }
+    public static void main(String[] args) {
+        int arr[]={7,6,4,5,3,2,1,0};
+        int res=ms_finder(arr);
+        System.out.println(res);
+    }
+}
