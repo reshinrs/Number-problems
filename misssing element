@@ -1,0 +1,36 @@
+package coding_problems;
+
+import org.jetbrains.annotations.NotNull;
+
+import java.util.*;
+
+public class missing_element {
+    public static List<Integer>  ms_finder(int arr[]){
+        int i=1;
+        while(i<arr.length) {
+            int c = arr[i] - 1;
+            if (arr[i] != arr[c]) {//cyclic sort to sort the array
+                swap(arr, i, c);
+            } else {
+                i++;
+            }
+        }
+        List<Integer> res= new ArrayList<>();
+        for(int j=0;j<arr.length;i++){
+            if(arr[i]!=i+1){//logic to find the missing element
+                res.add(i+1);
+            }
+        }
+        return res;
+    }
+    public static void swap(int arr[],int a,int b){//logic to swap the numbers
+        int temp=arr[a];
+        arr[a]=arr[b];
+        arr[b]=temp;
+    }
+    public static void main(String[] args) {
+        int arr[]={4,3,2,7,8,2,3,1};
+        List<Integer> res=ms_finder(arr);
+        System.out.println(res);
+    }
+}
