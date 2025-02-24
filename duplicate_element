@@ -1,0 +1,30 @@
+package coding_problems;
+
+public class duplicate_element {
+    public static int dfinder(int arr[]){
+        int i=0;
+        while(i<arr.length){
+            if(arr[i]!=i+1){//logic to find the duplicate element
+                int c=arr[i]-1;
+                if(arr[i]!=arr[c]){//cyclic sort to sort the array
+                    swap(arr,i,c);
+                }
+                else {
+                    return arr[i];
+                }
+            }
+            else i++;
+        }
+        return 0;
+    }
+    public static void swap(int arr[], int a, int b){//method to swap the integers
+        int t=arr[a];
+        arr[a]=arr[b];
+        arr[b]=t;
+    }
+    public static void main(String[] args) {
+        int arr[]={1,3,4,2,2};
+        int res=dfinder(arr);
+        System.out.println(res);
+    }
+}
